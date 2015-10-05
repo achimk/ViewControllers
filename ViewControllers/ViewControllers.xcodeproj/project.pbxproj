@@ -18,6 +18,7 @@
 		27CC58AC1BC2F144008C3B48 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */; settings = {ASSET_TAGS = (); }; };
 		27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */; settings = {ASSET_TAGS = (); }; };
 		27CC58B21BC30DDA008C3B48 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		27CC58B51BC32E8A008C3B48 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58B41BC32E8A008C3B48 /* NavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autorotatable.swift; sourceTree = "<group>"; };
 		27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		27CC58B41BC32E8A008C3B48 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				27CC58B31BC30DDD008C3B48 /* Base */,
 				27CC58A61BC2E8C7008C3B48 /* ViewController.swift */,
+				27CC58B41BC32E8A008C3B48 /* NavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				27CC58A71BC2E8C7008C3B48 /* ViewController.swift in Sources */,
 				27CC58AA1BC2EB10008C3B48 /* UIViewController+Extensions.swift in Sources */,
 				27CC58731BC2E6E8008C3B48 /* AppDelegate.swift in Sources */,
+				27CC58B51BC32E8A008C3B48 /* NavigationController.swift in Sources */,
 				27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

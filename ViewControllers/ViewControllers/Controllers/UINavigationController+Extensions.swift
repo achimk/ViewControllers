@@ -30,21 +30,24 @@ extension UINavigationController: Autorotatable {
     
     // MARK: Accessors
     
-    var autorotationMode: AutorotationMode {
+    var autorotation: Autorotation {
         get {
-            return AutorotationMode.Container
+            if let autorotationMode = objc_getAssociatedObject(self, &Static.AutorotationMode) as? UInt {
+                return Autorotation(rawValue: autorotationMode)!
+            } else {
+                return Autorotation.Container
+            }
         }
         
         set {
-            // FIXME: Fix setter for autorotation mode
-//            objc_setAssociatedObject(self, &Static.AutorotationMode, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &Static.AutorotationMode, newValue.rawValue as UInt?, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
     // MARK: Swizzled Rotation Methods
     
     func swizzled_shouldAutorotate() -> Bool {
-        switch autorotationMode.rawValue {
+        switch autorotation {
         case .Container:
             return self.swizzled_shouldAutorotate()
             
@@ -68,7 +71,7 @@ extension UINavigationController: Autorotatable {
     
     func swizzled_supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         var mask = UIInterfaceOrientationMask.All.rawValue
-        switch autorotationMode.rawValue {
+        switch autorotation {
         case .Container:
             mask = self.swizzled_supportedInterfaceOrientations().rawValue
             

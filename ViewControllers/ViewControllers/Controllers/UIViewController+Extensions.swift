@@ -36,9 +36,8 @@ extension UIViewController {
     
     private var firstTime: Bool {
         get {
-            let firstTime = objc_getAssociatedObject(self, &Static.AppearsFirstTime) as? Bool
-            if firstTime != nil, let isFirstTime = firstTime {
-                return isFirstTime
+            if let firstTime = objc_getAssociatedObject(self, &Static.AppearsFirstTime) as? Bool {
+                return firstTime
             } else {
                 return true
             }
@@ -51,9 +50,8 @@ extension UIViewController {
     
     private var viewVisible: Bool {
         get {
-            let viewVisible = objc_getAssociatedObject(self, &Static.ViewVisible) as? Bool
-            if viewVisible != nil, let isVisible = viewVisible {
-                return isVisible
+            if let viewVisible = objc_getAssociatedObject(self, &Static.ViewVisible) as? Bool {
+                return viewVisible
             } else {
                 return false
             }
