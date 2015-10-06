@@ -14,31 +14,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(__FUNCTION__)
-        self.view.backgroundColor = UIColor.redColor()
+        print("\(self.dynamicType): \(__FUNCTION__)")
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print(__FUNCTION__)
-        print(appearsFirstTime())
-        print(isViewVisible())
+        print("\(self.dynamicType): \(__FUNCTION__)")
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        print(__FUNCTION__)
-        print(appearsFirstTime())
-        print(isViewVisible())
+        print("\(self.dynamicType): \(__FUNCTION__)")
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        print(__FUNCTION__)
+        print("\(self.dynamicType): \(__FUNCTION__)")
     }
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        print(__FUNCTION__)
+        print("\(self.dynamicType): \(__FUNCTION__)")
     }
+    
+
 }
+

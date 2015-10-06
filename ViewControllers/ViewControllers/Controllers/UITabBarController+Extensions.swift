@@ -1,14 +1,14 @@
 //
-//  UINavigationController+Extensions.swift
+//  UITabBarController+Extensions.swift
 //  ViewControllers
 //
-//  Created by Joachim Kret on 05.10.2015.
+//  Created by Joachim Kret on 06/10/15.
 //  Copyright © 2015 Joachim Kret. All rights reserved.
 //
 
 import UIKit
 
-extension UINavigationController: Autorotatable {
+extension UITabBarController: Autorotatable {
     private struct Static {
         static var token: dispatch_once_t = 0
         static var AutorotationMode = "AutorotationMode"
@@ -18,7 +18,7 @@ extension UINavigationController: Autorotatable {
     
     public override class func initialize() {
         // make sure this isn't a subclass
-        if self !== UINavigationController.self {
+        if self !== UITabBarController.self {
             return
         }
         
@@ -52,16 +52,18 @@ extension UINavigationController: Autorotatable {
             return self.swizzled_shouldAutorotate()
             
         case .ContainerAndTopChildren:
-            if let topViewController = topViewController {
-                return topViewController.shouldAutorotate()
+            if let selectedViewController = selectedViewController {
+                return selectedViewController.shouldAutorotate()
             } else {
                 return true
             }
             
         case .ContainerAndAllChildren:
-            for viewController in viewControllers.reverse() {
-                if !viewController.shouldAutorotate() {
-                    return false
+            if let viewControllers = viewControllers {
+                for viewController in viewControllers {
+                    if !viewController.shouldAutorotate() {
+                        return false
+                    }
                 }
             }
             
@@ -77,13 +79,15 @@ extension UINavigationController: Autorotatable {
             mask = self.swizzled_supportedInterfaceOrientations().rawValue
             
         case .ContainerAndTopChildren:
-            if let topViewController = topViewController {
-                mask &= topViewController.supportedInterfaceOrientations().rawValue
+            if let selectedViewController = selectedViewController {
+                mask &= selectedViewController.supportedInterfaceOrientations().rawValue
             }
             
         case .ContainerAndAllChildren:
-            for viewController in viewControllers.reverse() {
-                mask &= viewController.supportedInterfaceOrientations().rawValue
+            if let viewControllers = viewControllers {
+                for viewController in viewControllers {
+                    mask &= viewController.supportedInterfaceOrientations().rawValue
+                }
             }
         }
         

@@ -1,14 +1,14 @@
 //
-//  UINavigationController+Extensions.swift
+//  UISplitViewController+Extensions.swift
 //  ViewControllers
 //
-//  Created by Joachim Kret on 05.10.2015.
+//  Created by Joachim Kret on 06/10/15.
 //  Copyright © 2015 Joachim Kret. All rights reserved.
 //
 
 import UIKit
 
-extension UINavigationController: Autorotatable {
+extension UISplitViewController: Autorotatable {
     private struct Static {
         static var token: dispatch_once_t = 0
         static var AutorotationMode = "AutorotationMode"
@@ -18,7 +18,7 @@ extension UINavigationController: Autorotatable {
     
     public override class func initialize() {
         // make sure this isn't a subclass
-        if self !== UINavigationController.self {
+        if self !== UISplitViewController.self {
             return
         }
         
@@ -51,15 +51,8 @@ extension UINavigationController: Autorotatable {
         case .Container:
             return self.swizzled_shouldAutorotate()
             
-        case .ContainerAndTopChildren:
-            if let topViewController = topViewController {
-                return topViewController.shouldAutorotate()
-            } else {
-                return true
-            }
-            
-        case .ContainerAndAllChildren:
-            for viewController in viewControllers.reverse() {
+        case .ContainerAndTopChildren, .ContainerAndAllChildren:
+            for viewController in viewControllers {
                 if !viewController.shouldAutorotate() {
                     return false
                 }
@@ -76,12 +69,7 @@ extension UINavigationController: Autorotatable {
         case .Container:
             mask = self.swizzled_supportedInterfaceOrientations().rawValue
             
-        case .ContainerAndTopChildren:
-            if let topViewController = topViewController {
-                mask &= topViewController.supportedInterfaceOrientations().rawValue
-            }
-            
-        case .ContainerAndAllChildren:
+        case .ContainerAndTopChildren, .ContainerAndAllChildren:
             for viewController in viewControllers.reverse() {
                 mask &= viewController.supportedInterfaceOrientations().rawValue
             }
