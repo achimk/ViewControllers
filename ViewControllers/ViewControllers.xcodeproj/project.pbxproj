@@ -10,6 +10,7 @@
 		271C8A711BC461BB00080ADB /* UICollectionViewCell+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A6E1BC461BB00080ADB /* UICollectionViewCell+Dequeue.swift */; settings = {ASSET_TAGS = (); }; };
 		271C8A731BC461BB00080ADB /* UITableViewCell+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A701BC461BB00080ADB /* UITableViewCell+Dequeue.swift */; settings = {ASSET_TAGS = (); }; };
 		271C8A751BC461F400080ADB /* UIResponder+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A741BC461F400080ADB /* UIResponder+Chain.swift */; settings = {ASSET_TAGS = (); }; };
+		271C8A771BC4637100080ADB /* UIViewController+Containment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A761BC4637100080ADB /* UIViewController+Containment.swift */; settings = {ASSET_TAGS = (); }; };
 		2774BE181BC4234300D1EEB6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774BE171BC4234300D1EEB6 /* CollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		27818A121BC44DE100F5D91D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27818A111BC44DE100F5D91D /* MainNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		27818A141BC44E0300F5D91D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27818A131BC44E0300F5D91D /* MainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -50,6 +51,7 @@
 		271C8A6E1BC461BB00080ADB /* UICollectionViewCell+Dequeue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Dequeue.swift"; sourceTree = "<group>"; };
 		271C8A701BC461BB00080ADB /* UITableViewCell+Dequeue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Dequeue.swift"; sourceTree = "<group>"; };
 		271C8A741BC461F400080ADB /* UIResponder+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Chain.swift"; sourceTree = "<group>"; };
+		271C8A761BC4637100080ADB /* UIViewController+Containment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Containment.swift"; sourceTree = "<group>"; };
 		2774BE171BC4234300D1EEB6 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		27818A111BC44DE100F5D91D /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		27818A131BC44E0300F5D91D /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				27CC58A91BC2EB10008C3B48 /* UIViewController+Extensions.swift */,
+				271C8A761BC4637100080ADB /* UIViewController+Containment.swift */,
 				27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */,
 				279E458C1BC3C10E003C3D24 /* UITabBarController+Extensions.swift */,
 				279E458E1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift */,
@@ -384,6 +387,7 @@
 				27CC58AA1BC2EB10008C3B48 /* UIViewController+Extensions.swift in Sources */,
 				271C8A711BC461BB00080ADB /* UICollectionViewCell+Dequeue.swift in Sources */,
 				27CC58731BC2E6E8008C3B48 /* AppDelegate.swift in Sources */,
+				271C8A771BC4637100080ADB /* UIViewController+Containment.swift in Sources */,
 				271C8A751BC461F400080ADB /* UIResponder+Chain.swift in Sources */,
 				27818A121BC44DE100F5D91D /* MainNavigationController.swift in Sources */,
 				27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */,
