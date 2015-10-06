@@ -14,7 +14,7 @@ class MainTableViewController: TableViewController {
         super.viewDidLoad()
         
         if let tableView = tableView {
-            tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+            UITableViewCell.registerCell(tableView)
         }
     }
     
@@ -44,7 +44,7 @@ class MainTableViewController: TableViewController {
 extension MainTableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = UITableViewCell.cell(tableView, indexPath: indexPath)
         cell.textLabel?.text = "\(indexPath.section) - \(indexPath.row)"
         return cell
     }
