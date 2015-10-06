@@ -9,34 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    // MARK: View Lifecycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("\(self.dynamicType): \(__FUNCTION__)")
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        print("\(self.dynamicType): \(__FUNCTION__)")
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        print("\(self.dynamicType): \(__FUNCTION__)")
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        print("\(self.dynamicType): \(__FUNCTION__)")
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("\(self.dynamicType): \(__FUNCTION__)")
-    }
-    
 
+    // MARK: Init / Deinit
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        finishInitialize()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        finishInitialize()
+    }
+    
+    internal func finishInitialize() {
+        // Sublcasses can override this method
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
 }
 
