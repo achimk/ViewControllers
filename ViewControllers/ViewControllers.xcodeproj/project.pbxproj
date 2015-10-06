@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2774BE181BC4234300D1EEB6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774BE171BC4234300D1EEB6 /* CollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		27818A121BC44DE100F5D91D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27818A111BC44DE100F5D91D /* MainNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		27818A141BC44E0300F5D91D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27818A131BC44E0300F5D91D /* MainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		279E458D1BC3C10E003C3D24 /* UITabBarController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E458C1BC3C10E003C3D24 /* UITabBarController+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		279E458F1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279E458E1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
 		27CC58731BC2E6E8008C3B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58721BC2E6E8008C3B48 /* AppDelegate.swift */; };
@@ -21,7 +23,6 @@
 		27CC58AC1BC2F144008C3B48 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */; settings = {ASSET_TAGS = (); }; };
 		27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */; settings = {ASSET_TAGS = (); }; };
 		27CC58B21BC30DDA008C3B48 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
-		27CC58B51BC32E8A008C3B48 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58B41BC32E8A008C3B48 /* NavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		27FCF3E41BC4050B00E0510B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FCF3E31BC4050B00E0510B /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		2774BE171BC4234300D1EEB6 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		27818A111BC44DE100F5D91D /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		27818A131BC44E0300F5D91D /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		279E458C1BC3C10E003C3D24 /* UITabBarController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extensions.swift"; sourceTree = "<group>"; };
 		279E458E1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISplitViewController+Extensions.swift"; sourceTree = "<group>"; };
 		27CC586F1BC2E6E7008C3B48 /* ViewControllers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +66,6 @@
 		27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autorotatable.swift; sourceTree = "<group>"; };
 		27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
-		27CC58B41BC32E8A008C3B48 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		27FCF3E31BC4050B00E0510B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +156,8 @@
 				27FCF3E01BC404BF00E0510B /* Protocols */,
 				27CC58B31BC30DDD008C3B48 /* Extensions */,
 				27FCF3E11BC404D100E0510B /* Base */,
-				27CC58B41BC32E8A008C3B48 /* NavigationController.swift */,
+				27818A111BC44DE100F5D91D /* MainNavigationController.swift */,
+				27818A131BC44E0300F5D91D /* MainTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,12 +359,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CC58AC1BC2F144008C3B48 /* NSObject+Swizzle.swift in Sources */,
+				27818A141BC44E0300F5D91D /* MainTableViewController.swift in Sources */,
 				27CC58B21BC30DDA008C3B48 /* UINavigationController+Extensions.swift in Sources */,
 				27CC58A71BC2E8C7008C3B48 /* ViewController.swift in Sources */,
 				27FCF3E41BC4050B00E0510B /* TableViewController.swift in Sources */,
 				27CC58AA1BC2EB10008C3B48 /* UIViewController+Extensions.swift in Sources */,
 				27CC58731BC2E6E8008C3B48 /* AppDelegate.swift in Sources */,
-				27CC58B51BC32E8A008C3B48 /* NavigationController.swift in Sources */,
+				27818A121BC44DE100F5D91D /* MainNavigationController.swift in Sources */,
 				27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */,
 				279E458F1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift in Sources */,
 				279E458D1BC3C10E003C3D24 /* UITabBarController+Extensions.swift in Sources */,

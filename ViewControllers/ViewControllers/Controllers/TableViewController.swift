@@ -11,6 +11,7 @@ import UIKit
 class TableViewController: ViewController {
     var shouldClearSelectionOnReloadData = false
     var shouldReloadDataOnViewWillAppear = false
+    private(set) var tableViewFromNib = false
     
     // MARK: Accessors
     
@@ -42,9 +43,14 @@ class TableViewController: ViewController {
     
     // MARK: View Lifecycle
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        tableViewFromNib = (tableView != nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         if let tableView = tableView {
             setupTableView(tableView)
         }
@@ -52,9 +58,23 @@ class TableViewController: ViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         if appearsFirstTime() || shouldReloadDataOnViewWillAppear {
             reloadData()
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if !tableViewFromNib, let tableView = tableView {
+            let edgeInsets = UIEdgeInsets.init(top: topLayoutGuide.length, left: 0.0, bottom: bottomLayoutGuide.length, right: 0.0)
+            tableView.contentInset = edgeInsets
+            tableView.scrollIndicatorInsets = edgeInsets
+            
+            if appearsFirstTime() {
+                tableView.scrollRectToVisible(CGRect.init(x: 0.0, y: 0.0, width: 1.0, height: 1.0), animated: false)
+            }
         }
     }
     
@@ -103,6 +123,10 @@ extension TableViewController: UITableViewDataSource {
         return UITableViewCell()
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 0
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
@@ -123,6 +147,9 @@ extension TableViewController {
             return
         }
         
+        tableViewFromNib = false
+        automaticallyAdjustsScrollViewInsets = false
+        
         if tableView.delegate == nil {
             tableView.delegate = self
         }
@@ -130,11 +157,10 @@ extension TableViewController {
         if tableView.dataSource == nil {
             tableView.dataSource = self
         }
-        
+
         tableView.translatesAutoresizingMaskIntoConstraints = true
         tableView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         tableView.frame = view.bounds
         view.addSubview(tableView)
     }
-    
 }

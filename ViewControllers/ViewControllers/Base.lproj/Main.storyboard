@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="cip-DU-pXC">
             <objects>
-                <navigationController id="jhN-SK-ec5" customClass="NavigationController" customModule="ViewControllers" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="jhN-SK-ec5" customClass="MainNavigationController" customModule="ViewControllers" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cBI-9t-UHJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -20,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="501" y="334"/>
         </scene>
-        <!--View Controller-->
+        <!--Main Table View Controller-->
         <scene sceneID="ne3-dr-fPQ">
             <objects>
-                <viewController id="RzW-D0-UDi" customClass="ViewController" customModule="ViewControllers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RzW-D0-UDi" customClass="MainTableViewController" customModule="ViewControllers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1i8-gp-eRd"/>
                         <viewControllerLayoutGuide type="bottom" id="xTz-EF-1kP"/>
@@ -31,9 +31,28 @@
                     <view key="view" contentMode="scaleToFill" id="qhH-xP-J7c">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-Ad-Vdd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="RzW-D0-UDi" id="uHb-AS-KAF"/>
+                                    <outlet property="delegate" destination="RzW-D0-UDi" id="r75-15-zh0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F3x-Ad-Vdd" firstAttribute="top" secondItem="qhH-xP-J7c" secondAttribute="top" id="TlQ-yA-Fzm"/>
+                            <constraint firstItem="xTz-EF-1kP" firstAttribute="top" secondItem="F3x-Ad-Vdd" secondAttribute="bottom" id="U4c-1t-X9X"/>
+                            <constraint firstAttribute="trailing" secondItem="F3x-Ad-Vdd" secondAttribute="trailing" id="aHW-AH-94T"/>
+                            <constraint firstItem="F3x-Ad-Vdd" firstAttribute="leading" secondItem="qhH-xP-J7c" secondAttribute="leading" id="r8J-x4-vU9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sbT-u1-IBh"/>
+                    <connections>
+                        <outlet property="tableView" destination="F3x-Ad-Vdd" id="zhX-R7-xq7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPT-dE-PVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

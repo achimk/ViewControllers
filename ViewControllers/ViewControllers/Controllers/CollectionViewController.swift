@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewController: ViewController {
     var shouldClearSelectionOnReloadData = false
     var shouldReloadDataOnViewWillAppear = false
+    private(set) var collectionViewFromNib = false
     
     // MARK: Accessors
     
@@ -42,6 +43,11 @@ class CollectionViewController: ViewController {
     
     // MARK: View Lifecycle
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        collectionViewFromNib = (collectionView != nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +61,16 @@ class CollectionViewController: ViewController {
         
         if appearsFirstTime() || shouldReloadDataOnViewWillAppear {
             reloadData()
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if !collectionViewFromNib, let collectionView = collectionView {
+            let edgeInsets = UIEdgeInsets.init(top: topLayoutGuide.length, left: 0.0, bottom: bottomLayoutGuide.length, right: 0.0)
+            collectionView.contentInset = edgeInsets
+            collectionView.scrollIndicatorInsets = edgeInsets
         }
     }
 }
@@ -91,6 +107,10 @@ extension CollectionViewController: UICollectionViewDataSource {
         assert(false, "Can't present a cell for empty dequeue implementation.")
         return UICollectionViewCell()
     }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 0
+    }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
@@ -111,6 +131,9 @@ extension CollectionViewController {
         guard isViewLoaded() && collectionView.superview == nil else {
             return
         }
+        
+        collectionViewFromNib = false
+        automaticallyAdjustsScrollViewInsets = false
         
         if collectionView.delegate == nil {
             collectionView.delegate = self
