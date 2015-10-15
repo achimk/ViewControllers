@@ -27,6 +27,7 @@
 		27CC58AC1BC2F144008C3B48 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */; settings = {ASSET_TAGS = (); }; };
 		27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */; settings = {ASSET_TAGS = (); }; };
 		27CC58B21BC30DDA008C3B48 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */; settings = {ASSET_TAGS = (); }; };
+		27EAB75F1BCFAE6C00640449 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EAB75E1BCFAE6C00640449 /* ContainerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		27FCF3E41BC4050B00E0510B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FCF3E31BC4050B00E0510B /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
 		27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Autorotatable.swift; sourceTree = "<group>"; };
 		27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		27EAB75E1BCFAE6C00640449 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		27FCF3E31BC4050B00E0510B /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,8 +223,8 @@
 		27CC58B31BC30DDD008C3B48 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				27CC58A91BC2EB10008C3B48 /* UIViewController+Extensions.swift */,
 				271C8A761BC4637100080ADB /* UIViewController+Containment.swift */,
+				27CC58A91BC2EB10008C3B48 /* UIViewController+Extensions.swift */,
 				27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */,
 				279E458C1BC3C10E003C3D24 /* UITabBarController+Extensions.swift */,
 				279E458E1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift */,
@@ -244,6 +246,7 @@
 				27CC58A61BC2E8C7008C3B48 /* ViewController.swift */,
 				27FCF3E31BC4050B00E0510B /* TableViewController.swift */,
 				2774BE171BC4234300D1EEB6 /* CollectionViewController.swift */,
+				27EAB75E1BCFAE6C00640449 /* ContainerViewController.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				27CC58731BC2E6E8008C3B48 /* AppDelegate.swift in Sources */,
 				271C8A771BC4637100080ADB /* UIViewController+Containment.swift in Sources */,
 				271C8A751BC461F400080ADB /* UIResponder+Chain.swift in Sources */,
+				27EAB75F1BCFAE6C00640449 /* ContainerViewController.swift in Sources */,
 				27818A121BC44DE100F5D91D /* MainNavigationController.swift in Sources */,
 				27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */,
 				279E458F1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift in Sources */,
