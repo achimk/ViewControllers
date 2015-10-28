@@ -1,0 +1,5 @@
+[submodule "ViewControllers/Dependencies/Swift-UIKit-Extensions"]
+	path = ViewControllers/Dependencies/Swift-UIKit-Extensions
+	url = git@github.com:achimk/Swift-UIKit-Extensions.git
+	ignore = dirty
+	

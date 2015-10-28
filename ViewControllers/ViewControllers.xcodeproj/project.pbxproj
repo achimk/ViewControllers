@@ -104,11 +104,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		271C8A6D1BC4615800080ADB /* Extensions */ = {
+		271549271BE0F63200692150 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				2715492A1BE0F79800692150 /* Swift-UIKit-Extensions */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		2715492A1BE0F79800692150 /* Swift-UIKit-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2715492E1BE0F81700692150 /* Protocols */,
+				2715492B1BE0F7C100692150 /* Controllers */,
+				2715492D1BE0F7CE00692150 /* Extensions */,
+				2715492C1BE0F7C800692150 /* Views */,
+			);
+			path = "Swift-UIKit-Extensions";
+			sourceTree = "<group>";
+		};
+		2715492B1BE0F7C100692150 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				271C8A761BC4637100080ADB /* UIViewController+Containment.swift */,
+				27CC58A91BC2EB10008C3B48 /* UIViewController+Extensions.swift */,
+				27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */,
+				279E458C1BC3C10E003C3D24 /* UITabBarController+Extensions.swift */,
+				279E458E1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2715492C1BE0F7C800692150 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				271C8A701BC461BB00080ADB /* UITableViewCell+Dequeue.swift */,
 				271C8A6E1BC461BB00080ADB /* UICollectionViewCell+Dequeue.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2715492D1BE0F7CE00692150 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */,
+				271C8A741BC461F400080ADB /* UIResponder+Chain.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2715492E1BE0F81700692150 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		271C8A6D1BC4615800080ADB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -116,6 +171,7 @@
 		27CC58661BC2E6E7008C3B48 = {
 			isa = PBXGroup;
 			children = (
+				271549271BE0F63200692150 /* Dependencies */,
 				27CC58711BC2E6E7008C3B48 /* ViewControllers */,
 				27CC58861BC2E6E8008C3B48 /* ViewControllersTests */,
 				27CC58911BC2E6E8008C3B48 /* ViewControllersUITests */,
@@ -199,8 +255,6 @@
 		27CC58A31BC2E721008C3B48 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				27CC58AB1BC2F144008C3B48 /* NSObject+Swizzle.swift */,
-				271C8A741BC461F400080ADB /* UIResponder+Chain.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,11 +277,6 @@
 		27CC58B31BC30DDD008C3B48 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				271C8A761BC4637100080ADB /* UIViewController+Containment.swift */,
-				27CC58A91BC2EB10008C3B48 /* UIViewController+Extensions.swift */,
-				27CC58B11BC30DDA008C3B48 /* UINavigationController+Extensions.swift */,
-				279E458C1BC3C10E003C3D24 /* UITabBarController+Extensions.swift */,
-				279E458E1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -235,7 +284,6 @@
 		27FCF3E01BC404BF00E0510B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				27CC58AD1BC305F6008C3B48 /* Autorotatable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6AB0BBBD46CD4281A09FD5B383EF4B850EBF9E5F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6AB0BBBD46CD4281A09FD5B383EF4B850EBF9E5F" : 0,
+    "CDB2569068CBF9DADBA31FBA9F54B030E9F66928" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A41DADD8-AA26-407F-B638-9C2DC5CA0B65",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6AB0BBBD46CD4281A09FD5B383EF4B850EBF9E5F" : "ViewControllers\/",
+    "CDB2569068CBF9DADBA31FBA9F54B030E9F66928" : "ViewControllers\/ViewControllers\/Dependencies\/Swift-UIKit-Extensions\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ViewControllers",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ViewControllers.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:achimk\/ViewControllers.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6AB0BBBD46CD4281A09FD5B383EF4B850EBF9E5F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:achimk\/Swift-UIKit-Extensions.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CDB2569068CBF9DADBA31FBA9F54B030E9F66928"
+    }
+  ]
+}
