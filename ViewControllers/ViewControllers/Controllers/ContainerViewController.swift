@@ -61,7 +61,7 @@ class ContainerViewController: ViewController {
                 currentViewController = newValue
                 
                 if let viewContainer = viewContainer, _ = view {
-                    replace(existingViewController, withViewController: newViewController, usingContainer: viewContainer)
+                    replaceFromViewController(existingViewController, toViewController: newViewController, inContainer: viewContainer)
                 }
             }
         }

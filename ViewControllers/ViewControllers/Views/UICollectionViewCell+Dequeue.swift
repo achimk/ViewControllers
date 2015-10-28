@@ -11,15 +11,11 @@ import UIKit
 extension UICollectionViewCell {
     
     class var identifier: String {
-        get {
-            return NSStringFromClass(self)
-        }
+        return NSStringFromClass(self)
     }
     
     class var nibName: String? {
-        get {
-            return nil
-        }
+        return nil
     }
     
     static func registerCell(collectionView : UICollectionView) {
