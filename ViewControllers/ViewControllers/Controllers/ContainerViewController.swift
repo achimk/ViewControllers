@@ -42,7 +42,7 @@ class ContainerViewController: ViewController {
         }
         
         set {
-            if newValue <= 0 && newValue > viewControllers.count {
+            if newValue >= 0 && newValue < viewControllers.count {
                selectedViewController = viewControllers[newValue]
             }
         }
