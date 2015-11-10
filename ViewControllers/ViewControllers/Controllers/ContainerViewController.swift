@@ -48,6 +48,7 @@ class ContainerViewController: ViewController {
         }
     }
     
+    var replaceBlock: ((fromVC: UIViewController?, toVC: UIViewController?, viewContainer: UIView) -> (Void))?
     private var currentViewController: UIViewController?
     var selectedViewController: UIViewController? {
         get {
@@ -61,7 +62,11 @@ class ContainerViewController: ViewController {
                 currentViewController = newValue
                 
                 if let viewContainer = viewContainer, _ = view {
-                    replaceFromViewController(existingViewController, toViewController: newViewController, inContainer: viewContainer)
+                    if let replaceBlock = replaceBlock {
+                        replaceBlock(fromVC: existingViewController, toVC: newViewController, viewContainer: viewContainer)
+                    } else {
+                        containerReplaceFromViewController(existingViewController, toViewController: newViewController, inContainer: viewContainer)
+                    }
                 }
             }
         }
@@ -154,5 +159,41 @@ extension ContainerViewController {
         viewContainer.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         viewContainer.frame = view.bounds
         view.addSubview(viewContainer)
+    }
+    
+    private func containerReplaceFromViewController(fromVC: UIViewController?, toViewController toVC: UIViewController?, inContainer viewContainer: UIView) {
+        if fromVC != toVC, let fromVC = fromVC, let toVC = toVC {
+            // Replace existing view controller with new view controller
+            toVC.willMoveToParentViewController(self)
+            fromVC.willMoveToParentViewController(nil)
+            fromVC.view.removeFromSuperview()
+            fromVC.removeFromParentViewController()
+            fromVC.didMoveToParentViewController(nil)
+            addChildViewController(toVC)
+            setupContainer(viewContainer, withViewController: toVC)
+            toVC.didMoveToParentViewController(self)
+            
+        } else if fromVC == nil, let toVC = toVC {
+            // add new view controller
+            toVC.willMoveToParentViewController(self)
+            addChildViewController(toVC)
+            setupContainer(viewContainer, withViewController: toVC)
+            toVC.didMoveToParentViewController(self)
+            
+        } else if toVC == nil, let fromVC = fromVC {
+            // remove existing view controller
+            fromVC.willMoveToParentViewController(nil)
+            fromVC.view.removeFromSuperview()
+            fromVC.removeFromParentViewController()
+            fromVC.didMoveToParentViewController(nil)
+        }
+    }
+    
+    private func setupContainer(viewContainer: UIView, withViewController viewController: UIViewController) {
+        viewController.view.translatesAutoresizingMaskIntoConstraints = true
+        viewController.view.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        viewController.view.frame = viewContainer.bounds
+        viewContainer.addSubview(viewController.view)
+        viewContainer.setNeedsLayout()
     }
 }

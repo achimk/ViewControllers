@@ -11,6 +11,7 @@
 		271C8A731BC461BB00080ADB /* UITableViewCell+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A701BC461BB00080ADB /* UITableViewCell+Dequeue.swift */; settings = {ASSET_TAGS = (); }; };
 		271C8A751BC461F400080ADB /* UIResponder+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A741BC461F400080ADB /* UIResponder+Chain.swift */; settings = {ASSET_TAGS = (); }; };
 		271C8A771BC4637100080ADB /* UIViewController+Containment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C8A761BC4637100080ADB /* UIViewController+Containment.swift */; settings = {ASSET_TAGS = (); }; };
+		272922A51BF2AD6300CE47FA /* RotationContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272922A41BF2AD6300CE47FA /* RotationContainerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2774BE181BC4234300D1EEB6 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2774BE171BC4234300D1EEB6 /* CollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		27818A121BC44DE100F5D91D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27818A111BC44DE100F5D91D /* MainNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		27818A141BC44E0300F5D91D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27818A131BC44E0300F5D91D /* MainTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -53,6 +54,7 @@
 		271C8A701BC461BB00080ADB /* UITableViewCell+Dequeue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Dequeue.swift"; sourceTree = "<group>"; };
 		271C8A741BC461F400080ADB /* UIResponder+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Chain.swift"; sourceTree = "<group>"; };
 		271C8A761BC4637100080ADB /* UIViewController+Containment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Containment.swift"; sourceTree = "<group>"; };
+		272922A41BF2AD6300CE47FA /* RotationContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationContainerViewController.swift; sourceTree = "<group>"; };
 		2774BE171BC4234300D1EEB6 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		27818A111BC44DE100F5D91D /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		27818A131BC44E0300F5D91D /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		272922A31BF2AD4000CE47FA /* Rotation */ = {
+			isa = PBXGroup;
+			children = (
+				272922A41BF2AD6300CE47FA /* RotationContainerViewController.swift */,
+			);
+			name = Rotation;
+			sourceTree = "<group>";
+		};
 		27CC58661BC2E6E7008C3B48 = {
 			isa = PBXGroup;
 			children = (
@@ -228,9 +238,8 @@
 		27CC58A01BC2E6F5008C3B48 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				27FCF3E01BC404BF00E0510B /* Protocols */,
-				27CC58B31BC30DDD008C3B48 /* Extensions */,
 				27FCF3E11BC404D100E0510B /* Base */,
+				272922A31BF2AD4000CE47FA /* Rotation */,
 				27818A111BC44DE100F5D91D /* MainNavigationController.swift */,
 				27818A131BC44E0300F5D91D /* MainTableViewController.swift */,
 			);
@@ -272,20 +281,6 @@
 			);
 			name = Storyboards;
 			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		27CC58B31BC30DDD008C3B48 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		27FCF3E01BC404BF00E0510B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Protocols;
 			sourceTree = "<group>";
 		};
 		27FCF3E11BC404D100E0510B /* Base */ = {
@@ -443,6 +438,7 @@
 				27EAB75F1BCFAE6C00640449 /* ContainerViewController.swift in Sources */,
 				27818A121BC44DE100F5D91D /* MainNavigationController.swift in Sources */,
 				27CC58AE1BC305F6008C3B48 /* Autorotatable.swift in Sources */,
+				272922A51BF2AD6300CE47FA /* RotationContainerViewController.swift in Sources */,
 				279E458F1BC3C2D1003C3D24 /* UISplitViewController+Extensions.swift in Sources */,
 				279E458D1BC3C10E003C3D24 /* UITabBarController+Extensions.swift in Sources */,
 				2774BE181BC4234300D1EEB6 /* CollectionViewController.swift in Sources */,
